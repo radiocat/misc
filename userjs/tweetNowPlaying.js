@@ -21,7 +21,7 @@ $(document).ready(function () {
             var artist = $('#player-artist').text();
             var album = $('#playerSongInfo > div.now-playing-info-wrapper > div.now-playing-info-content > div.currently-playing-details > div.player-album').text();
             var tweet = '♪' + title + ' / ' + artist + ' - ' + album;
-            window.open('https://twitter.com/intent/tweet?text=' + tweet + '&hashtags=NowPlaying');
+            window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweet) + '&hashtags=NowPlaying');
         }
     });
 });
